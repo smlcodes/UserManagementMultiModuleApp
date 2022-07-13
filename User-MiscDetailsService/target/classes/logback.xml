@@ -1,0 +1,28 @@
+<configuration>
+    <property name="LOG_PATH" value="/Users/satyakaveti/Library/CloudStorage/OneDrive-DPWorld/Code/Workspace/SluethZipkinTransactionManagement/" />
+    <appender name="STDOUT" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_PATH}/application-json.log</file>
+        <encoder class="net.logstash.logback.encoder.LogstashEncoder" />
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH}/application-json.%d{yyyy-MM-dd}.%i.gz
+            </fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+            <maxHistory>10</maxHistory>
+        </rollingPolicy>
+    </appender>
+
+    <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>
+                %d{ISO8601} [%highlight(%-5level)] [%-10.10t] %yellow(%-40.40logger{39}):%msg%n%throwable
+            </Pattern>
+        </layout>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="Console" />
+    </root>
+</configuration>
