@@ -103,5 +103,4 @@ Build and Run Root Project
 Ref.
 https://www.codejava.net/frameworks/spring-boot/create-multi-module-maven-project
 https://howtodoinjava.com/spring-boot2/sb-multi-module-maven-project/
-
-![image](https://user-images.githubusercontent.com/20472904/178669468-bbcb282e-00b4-4b8f-bbf6-e0b1266c4739.png)
+![image](https://user-images.githubusercontent.com/20472904/178669651-9b6d7b46-fa42-46a4-bb60-c5683dcee3cf.png)
